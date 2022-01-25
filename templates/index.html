@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Submit your wordle</title>
+  </head>
+  <body>
+    <h1>Submit your wordle</h1>
+    <p> Surrently supports IOS screenshots, iPhone XR preferred </p>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="file"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+  
+
+      <p>{{o1}} <br> {{o2}} <br> {{o3}}<br> {{o4}}<br> {{o5}}<br> {{o6}}</p>
+   
+ 
+    <hr>
+    {% for file in files %}
+      <img src="{{ url_for('upload', filename=file) }}" style="width: 200px">
+    {% endfor %}
+  </body>
+</html>
